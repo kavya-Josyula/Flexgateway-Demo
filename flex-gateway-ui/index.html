@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="js/scripts/angular.min.js"></script>
+    <script src="js/scripts/angular-router.min.js"></script>
+    <script src="js/scripts/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/scripts/bootstrap.min.js"></script>
+    <script src="js/scripts/fontawesome.js" data-auto-replace-svg="nest"></script>
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+
+<body ng-app="tshirtApp">
+    <div ng-include='"templates/header.html"'></div>
+    <div ng-view id="content"></div>
+    <div ng-include='"templates/footer.html"'></div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  # name will be used as resulting secret name if no secretName is specified under the spec section
+  name: customer-api-binding
+  namespace: mythical-payment
+  labels:
+    flex-gateway.mulesoft.com/kind: api-binding
+spec:
+  instanceRef:
+    name: customer-api
+  parameters:
+    adapter: mythical-payment-flex-gateway-adapter
+    service: customer-service
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  # name will be used as resulting secret name if no secretName is specified under the spec section
+  name: inventory-api-binding
+  namespace: mythical-payment
+  labels:
+    flex-gateway.mulesoft.com/kind: api-binding
+spec:
+  instanceRef:
+    name: inventory-api
+  parameters:
+    adapter: mythical-payment-flex-gateway-adapter
+    service: inventory-service
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  # name will be used as resulting secret name if no secretName is specified under the spec section
+  name: order-api-binding
+  namespace: mythical-payment
+  labels:
+    flex-gateway.mulesoft.com/kind: api-binding
+spec:
+  instanceRef:
+    name: order-api
+  parameters:
+    adapter: mythical-payment-flex-gateway-adapter
+    service: order-service
+---
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceBinding
+metadata:
+  # name will be used as resulting secret name if no secretName is specified under the spec section
+  name: payment-api-binding
+  namespace: mythical-payment
+  labels:
+    flex-gateway.mulesoft.com/kind: api-binding
+spec:
+  instanceRef:
+    name: payment-api
+  parameters:
+    adapter: mythical-payment-flex-gateway-adapter
+    service: payment-service

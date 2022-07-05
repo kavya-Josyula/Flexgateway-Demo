@@ -1,0 +1,16 @@
+apiVersion: servicecatalog.k8s.io/v1beta1
+kind: ServiceInstance
+metadata:
+  name: mythical-payment-flex-gateway-adapter
+  namespace: mythical-payment
+  labels:
+    flex-gateway.mulesoft.com/kind: adapter
+spec:
+  clusterServiceClassExternalName: anypoint-flex-gateway-adapter
+  clusterServicePlanExternalName: small
+  parameters:
+    clientId: <CLIENT ID>
+    clientSecret: <CLIENT SECRET>
+    platformUri: https://anypoint.mulesoft.com
+    replication:
+      replicas: 2
