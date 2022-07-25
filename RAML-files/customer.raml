@@ -1,0 +1,16 @@
+#%RAML 1.0
+title: jkm-ubuntu-customers-api
+/customers:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+  /{customerId}:          
+    get:
+      displayName: Get customers
+      description: Return customer information by customerId 
+      responses:
+        200: 
+          body:
+            application/json:    
